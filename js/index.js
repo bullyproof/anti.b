@@ -5,7 +5,6 @@ $('.owl-carousel').owlCarousel({
     autoplay:true,
     autoplayHoverPause:true,
     autoplayTimeout:5000,
-    margins:50,
     animateIn: true,
     items:4
 })
