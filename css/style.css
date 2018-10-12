@@ -1,0 +1,306 @@
+body {
+	margin: 0;
+}
+
+#product {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+#preload {
+	background-color: #9dc12f;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	font-family:'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 1.8vw;
+	text-shadow: 2px 2px #649e28;
+	color: white;
+	letter-spacing: 10px;
+
+	animation-name: appearCircle, zoomIn, fadeOut;
+	animation-duration: 1000ms, 1000ms, 1500ms;
+	animation-delay: 0ms, 0ms, 2500ms; /* add this */
+	animation-timing-function: ease-in, ease-in, ease-out;
+	animation-fill-mode: forwards, forwards, forwards;
+}
+
+#product {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 1000ms;
+	animation-delay: 2500ms;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+
+#preload-icon {
+	opacity: 0;
+	height: 200px;
+	width: 200px;
+	margin-top: 30vh !important;
+	margin-bottom: -100vh !important;
+
+	animation-name: appear, pulse;
+	animation-duration: 1000ms, 1000ms;
+	animation-delay: 1000ms, 0ms;
+	animation-iteration-count: 1, 2;
+	animation-fill-mode: forwards;
+}
+
+#preload-text {
+	opacity: 0;
+	animation-name: appear, slideInUp;
+	animation-duration: 1000ms, 1000ms;
+	animation-delay: 1000ms, 500ms;
+	animation-fill-mode: forwards;
+}
+
+nav {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+/*	opacity: 0;
+	animation-name: appear, slideInDown;
+	animation-duration: 1000ms, 5000ms;
+	animation-delay: 3600ms, 0ms;
+	animation-fill-mode: forwards, forwards;*/
+}
+
+#logo-text {
+	letter-spacing: 3px;
+}
+
+
+@keyframes appear {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes appearCircle {
+	0%   { opacity: 0;
+			border-radius: 50%;
+		 }
+	100% { opacity: 1;
+			border-radius: 0%;
+		 }
+}
+
+a.nav-item.nav-link.active {
+	color: #9dc12f !important;
+}
+
+#brand-text {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bolder;
+	font-size: 50px;
+	letter-spacing: 6px;
+	color: #9dc12f;
+}
+
+.lightGray {
+	color: rgba(0,0,0,0.5);
+}
+
+.darkGreen {
+	background-color: #649e28;
+	color: white;
+}
+
+.desc-text {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn-text {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+
+#mission {
+	/* background-color: #ecf0f5; */
+	background-image: url('../img/stars.png');
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 200px;
+	padding-right: 200px;
+
+}
+
+.emphasis {
+	font-weight:bold;
+	color:black;
+}
+
+#earth {
+	animation-name: spin;
+	animation-duration: 50000ms;
+	animation-delay: 0ms;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+#works, #impact, #team {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+#contact {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 200px;
+	padding-right: 200px;	
+}
+
+#impact {
+	background-color: #e9ebea;
+	padding-top: 100px;
+	padding-bottom: 400px;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+.circle {
+	height: 150px;
+	width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    -webkit-transition:all 3s ease;
+    transition: all 3s ease;
+}
+
+.circle-shadow {
+	box-shadow: 3px 3px rgba(157,193,47,0.5);
+}
+
+.circle:hover {
+	animation-name: smallSpin;
+	animation-duration: 1000ms;
+	animation-timing-function: ease-in-out;
+    -webkit-transition:all 3s ease;
+    transition: all 3s ease;
+}
+
+@-moz-keyframes smallSpin {
+    0%   {-moz-transform: rotate(0deg);}
+    50%  {-moz-transform: rotate(15deg);}
+    100% {-moz-transform: rotate(0deg);}
+}
+@-webkit-keyframes smallSpin {
+    0%   {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(15deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@keyframes smallSpin {
+    0%   {transform: rotate(0deg);}
+    50%  {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#hat {
+	animation-name: smallSpin2;
+	animation-duration: 1500ms;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes smallSpin2 {
+    0%   {-moz-transform: rotate(0deg);}
+    50%  {-moz-transform: rotate(8deg);}
+    100% {-moz-transform: rotate(0deg);}
+}
+@-webkit-keyframes smallSpin2 {
+    0%   {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(8deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@keyframes smallSpin2 {
+    0%   {transform: rotate(0deg);}
+    50%  {transform: rotate(8deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#down {
+    -webkit-animation: mover 800ms infinite  alternate;
+    animation: mover 800ms infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+#follow {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 200px;
+	padding-right: 200px;
+	background-color: #343436;
+}
+
+#slides {
+	margin-top: 80px;
+}
+
+.flag {
+	width:30px;
+	height:auto;
+	margin-left:15px;
+	border-radius:5px;
+}
+
+.article {
+	height: 580px !important;
+	width: 300px !important;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+.article:hover {
+	cursor: pointer;
+	box-shadow: 0 10px 20px 5px rgba(1, 1, 1, 0.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	transition: box-shadow 300ms, transform 300ms;
+	z-index: 1;
+}
+
+.article-title {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bolder;
+	font-size: 25px;
+	color: #9dc12f;
+	letter-spacing: 3px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.article-caption {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #cccccc;
+	padding-bottom: 20px;
+}
+
+.image {
+	width: inherit;
+	height: 200px;
+}
