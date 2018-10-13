@@ -304,7 +304,3 @@ a.nav-item.nav-link.active {
 	width: inherit;
 	height: 200px;
 }
-
-.owl-item {
-	width: 240px !important;
-}
