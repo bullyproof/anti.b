@@ -6,6 +6,7 @@ $('.owl-carousel').owlCarousel({
     autoplayHoverPause:true,
     autoplayTimeout:5000,
     animateIn: true,
-    items:4
+    items:4,
+    autoWidth: true
 })
 });
